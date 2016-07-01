@@ -1,4 +1,4 @@
-# sketchbook
+# Sketchbook
 This repository is my collection of sketches of potential projects. </br></br>
 
 Unless otherwise noted, the contents of this repository is licenced under 
