@@ -16,9 +16,9 @@ There may be use for a language that allows users with any native language to se
 Each language should have a command that exits and returns microphone control to whatever scope invoked it. For example, if you used the language selection language to select babel qwerty en-us English and speak the exit command babel qwerty will exit and return control to the language selection language. If babel qwerty was activated by a command by the mouse and you speak the exit command the speech recognition engine will exit and the microphone will be turned off. If the language selection language was activated by the platforms native voice command software and the exit command is given babel qwerty will exit and the native voice command software will be turned back on.
 
 # Languages
-The description of babel qwerty en-us English is here (link) with a table of key/sound mappings here (link).
+The description of babel qwerty en-us English is [here](BabelQwertyEn-usEnglish.md) with a table of key/sound mappings [here](BabelQwertyEn-usEnglishLayoutTable.md).
 Other languages would be devised for other keyboard layouts, character sets, and phoneme sets. (Users that speak different languages will find some syllables easier to pronounce and differentiate. A language for Japanese speaking users would probably use only one of the phonemes corresponding to L or R in English. A language for Chinese speaking users may use tonal components. A language for German speaking users may use more guttural phonemes. A language for French speaking users may use nasality to distinguish between syllables.) 
-Thoughts with regards to mouse or touchscreen device replacement are here (link).
+Thoughts with regards to mouse or touchscreen device replacement are [here](BabelMouseTouchscreen.md).
 A language of easy/fast gestures could be devised for signing people. This may be pointless compared to just using a keyboard or the existing signs for letters. 
 
 # Implementation steps
