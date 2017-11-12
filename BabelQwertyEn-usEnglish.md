@@ -7,7 +7,7 @@ Only the qwerty en-us layout for the English language speakers is detailed here.
 For ease of of learning the mapping of syllables to keys syllables are broken out into a 2 dimensional matrix by vowel sound and consonant sound and mapped to keys by the horizontal and vertical location of the keys on the qwerty keyboard.
 
 # Layout
-Here is a link to a table of key name, notational name, English phonetic spelling, IPA phonetic spelling.
+[Here](BabelQwertyEn-usEnglishLayoutTable.md) is a a table of key name, notational name, English phonetic spelling, IPA phonetic spelling.
 
 # Current ordering 
 ## Vowels: top to bottom: Name (Notation) &lt;English phonetic spelling&rt;. Ordered by alphabetical location then by long before short
