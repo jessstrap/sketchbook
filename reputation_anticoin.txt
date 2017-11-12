@@ -1,0 +1,69 @@
+proof of stake?
+
+Problem with bitcoin: the ledger itself is centralized. 
+information is not transmutable. no cryptographic function destroys its input. need to create a coin that doesn't need to be destroyed to be scarce.
+
+double spend is a problem. make it double get that is the 'problem'. double get is easily detected by the getter and the second get is rejected. 
+
+third party existance is not avoidable. 
+current finantial systems are about taking an amoritized risk in order to get convienience. 
+merchant trusts network who trusts banks who verify consumers reputation. service costs for fraud/default reduction/detection/insurance at each level. 
+credit cards and modern finance is an enormous reputation system. 
+simplify the system. make it ransparent and verifiable. 
+pki/dns is a reputation system. you trust/verify your browser/os/(or ca, if you are being careful/dilligent/paranoid) who trust/verifies the CA, who trusts/verifies the RAs, who trust/verify individual domain owners, who trust/verify individual certificates, who trust/verify individual machines. 
+there can be no finance without convienience, there can be no convienience without an ongoing trust relationship. there can be no trust relationship without relationships. 
+forget coins. what we are transacting in is trust and risk.
+stop trying to make a trustless system. its impossible. embrace the trust. make the trust easy. 
+
+double spending of coins is a problem. 
+make the coin something you don't want to get. creates a reciever verified situation instead of a third party verified situation. make the 'coin' be debt. make it be taken from the merchant to the customer in non repudiatable transactions. like zerocoin? 
+problem then becomes how does the merchant know it can trust an address. it can't. it can however, trust someone else who trusts the address. (layers of default mitigation.)
+ra's/end banks issue time limited certificates of trust. "reputation units" to consumers. How exactly they go about this is up to the bank/ra. 'person x has y level of trust for z ammount from me(bank/ra name a) for time period b.' These can be as long or short as the bank likes. The bank can demand collateral in cash, or mortgage, or blackmail material (ability to add information to the ledgers that affect your credit score). 
+ca's/credit networks do a similar process with the ra's, though usually on a lower frequency, with larger aggregate values, and worse existential consequences for fraud or default. (ie. if your bank gets hacked or starts handing out reputation supidly they could get fines, loses their visa account, or be sued out of existence.)
+merchants/browsers decide how much they trust the various ca's. do they take discover or amex, or just mastercard and visa, or just checks, or just wire transfers, or just cash, or just gold, or just art, or just commodities contracts, or just commodities?
+
+at transaction time 
+if online the merchant gets some debt units from the ca. if not online the merchant has to have some debt units already. 
+the merchant presents an ammount of money/debt redemption required, and certificate/transaction information. They can optionally pass some sort of description of their acceptance criteria. Optionally a hash of some debt units.
+    if online the consumer can get fresh high trust, short term, reputation certificates from their ra. the certificates could have an even higher level of trust if they are constrained to a specific merchant/ammount
+    if not online the consumer must have some sort of longer lasting certificate-of-reputation stored.
+the consumer then presents a certificate-of-reputation chain, a promise to the merchant that they will be paid by the ca in real money within time period q if they send this whole data packet with their signature to the ca within time period r, an acknolegement of authorization of this transaction to the ca/ra, and the certificate/transaction information, and a signature of the data packet. 
+the merchant then evaluates the certificate-of-reputation chain to see if it passes their acceptance criteria. (for most merchants this will be as simple as, chain is valid, ca is trusted, trust*reputation/reputation_length>1)
+If the transaction passes validation, the merchant accepts the transaction by giving to the consumer one or multiple of the below
+    the signed transacction and debt units.
+    the product being purchased. 
+these double signed certificates of debt sending/accepting are the digital cash. 
+
+the government/ra issues money and debt units to cas/merchants. 
+the government/ra issues consumes debt units and money from consumers and isssues reputation certificates to them. 
+
+downside: the merchant and consumer needed to have a 3 or four way handshake. 
+upside: there could be no time limit on the handshake. 
+upside: transactions can be performed entirely offline.
+downside: (compared to cash) the transactors have to have been online at some point.
+upside: the customer and merchant are anonamous to each other
+downside: the customer cannot be anonamous completely.
+downside: the flow of money can be easily backtraced. 
+upside: this is mitigated by the possibiility of zerocoin like chains participating in the anticoin economy. 
+downside: anticoin is not a currency on its own. it is only a proxy for other currencies. 
+upside: the supply of anticoin "market cap" goies up and down with the desire to use it to transact. 
+downside: the anticoin transactions are pretty big
+upside: no need for a centralized permanant ledger of any kind.
+upside: groups of anticoin transactions are liekly to contain lots of duplicate data. (the certificate chains) and should be easily compressible. 
+upside: these transactions don't really need to be stored, just transmitted and acknoledged. storage is only needed if offline. 
+
+potential problem: merchant acceptance criteria could become complicated and incompatible. 
+    mitigation: cas/ras ect will probably put pressure merchants to keep them simple and consistent. 
+potential problem: if digital storage is lost or the ability to do things digitally is lost you lose the utility of this system
+    mitigation: if the ability to do things digitally is lost, you already have bigger problems than the loss of a single transaction system.
+    mitigation: all that is invested or stored in the system is debt. if it gets lost no real value has been destroyed. 
+    mitigation: we already have things in place to deal with unclaimed money, burnt money, and defaulted/unclaimed debt. those mechanisms dont seem particularly broken to me. 
+
+"debt acceptance units"
+You accept debt to get something of value.
+
+proofs that someone else 'of suficient reputation'/'with suficient default risk mitigation'/'with suficient collateral' has accepted responsibility from me for these units of debt.
+
+assuring that the merchant doesn't run off with the customers anticoin without providing the service/value being bought is outside of scope for this plan. 
+
+cryptogrophy cannot create trust. it can only shuffle it around.
