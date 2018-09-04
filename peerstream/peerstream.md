@@ -50,6 +50,6 @@ These commands should be structured in a way that works well with command foldin
     before node y stops needing x as a parent node x recieves command saying when node z stops needing you as a parent start parenting node a.
     node x folds these two pending commands into when node y stops needing you as a parent start parenting node a and discards the intermediate data. 
 
-Other algorithms for tree optimization should be able to be plugged in and use the underlying command/control/telemetry/transformations. 
+Other algorithms for tree optimization (such as netographic proxcimity) should be able to be plugged in and use the underlying command/control/telemetry/transformations. 
     
 
