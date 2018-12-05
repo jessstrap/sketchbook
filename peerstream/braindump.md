@@ -13,8 +13,12 @@ The nodes are arranged into two parallel trees (A and B). Each node has a single
 Each segment of the content stream is signed by the source. Each node checks the content agains the signatures and discards malformed content. 
 Each node unconditionally forwards well formed content to its children. If one side of a dumbell is sufficiently behind due to an underperforming parent, underperforming ancestor set, or absent (dropped out) parent the ahead buddy streams content to the weaker buddy. During normal operation buddies exchange timestamps of the most recent data reciieved to coordinate when to start streaming between them. 
 
-Tree transformations to maintain the ballanced property and close gaps left by nodes that drop out are still being defined. (See the attached presentation files.) It is thought that standard tree ballancing algorithms based on tree rotations should work on the tree pair. In order to mimize churn and reward reliability, all the transformations should move older nodes upward in the tree. 
+Tree transformations to maintain the ballanced property and close gaps left by nodes that drop out are still being defined. (See the attached presentation files.) 
+In order to mimize churn and reward reliability, all the transformations should move older nodes upward in the tree. 
 New nodes are added to the bottom of the tree. 
+Underperforming non leaf nodes are removed from their current locations and re added to the bottom of the tree. 
+Underperforming leaf nodes are served as best they can. If they get children and still underperform, they will be shifted back down tree. 
+If the number of underperforming nodes exceeds half the nodes in the tree, underperforming leaf nodes will be dropped. A higher level librarty will be signaled handle those nodes, possibly shifting them onto a less demanding tree (lower bandwidth/video quality). 
 
 Unfortunatly the computations/data required to determine the transformations to be performed are not very amenable to distributed decision makeing with untrusted nodes. This creates a need for a central coordinator node. For practical purposes this node is colocated with the stream source. 
 
@@ -51,5 +55,11 @@ These commands should be structured in a way that works well with command foldin
     node x folds these two pending commands into when node y stops needing you as a parent start parenting node a and discards the intermediate data. 
 
 Other algorithms for tree optimization (such as netographic proxcimity) should be able to be plugged in and use the underlying command/control/telemetry/transformations. 
+figuring out how to change the tree for more netographic idealness while still rewarding reliability is an open question.
+
+
+Each node keeps a buffer 4 latencies long.
+If a parent is more than 2 latencies behind a partner the partner starts streaming. (prefer waiting on the parent to streaming from buddy.)
+If parent skips a frame (due to switching up the tree to earlier parents) the node should immediately request that frame from buddy. The buddy should have the frame in buffer or be about to get it from parent. 
     
 

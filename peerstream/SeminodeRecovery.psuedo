@@ -1,0 +1,16 @@
+struct Seminode {
+    parent: Option<Rc<Seminode>>;
+    parentNext: Option<Rc<Seminode>>;
+    
+    buddy : Option<Rc<Seminode>>;
+    buddyNext : Option<Rc<Seminode>>;
+    buddyIsSecondParent : bool;
+    
+    childLeft : Option<Rc<Seminode>>;
+    childLeftNext : Option<Rc<Seminode>>;
+    childLeftIsBuddy : bool;
+    
+    childRight : Option<Rc<Seminode>>;
+    childRightNext : Option<Rc<Seminode>>;
+    ChildRightIsBuddy : bool;
+}
